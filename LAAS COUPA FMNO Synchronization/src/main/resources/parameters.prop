@@ -1,0 +1,43 @@
+#
+#Wed Nov 18 10:58:22 UTC 2026
+365\ Days\ Scheduler=<row><cell>dateType</cell><cell></cell></row><row><cell>timeType</cell><cell></cell></row><row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>onWeekly</cell><cell></cell></row><row><cell>onMonthly</cell><cell></cell></row><row><cell>OnEveryMinute</cell><cell></cell></row><row><cell>fromInterval</cell><cell></cell></row><row><cell>toInterval</cell><cell></cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>triggerType</cell><cell>simple</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>fireNow\=true</cell></row>
+AlertsTrigger=/AlertsTrigger
+Append\ Timestamp=0
+Authentication=user_password
+Automatically\ Disconnect=1
+CSRF\ Protected=true
+Coupa_API=mckinsey-stage2.coupahost.com
+Coupa_Fmno=Coupa_Fmno
+Coupa_SFTP=Coupa_SFTP
+DefaultLRV_EndDate=20231101
+Directory=/Incoming/LookupValues
+Directory_Archive=/Incoming/FileStaging
+Encryption\ Key\ User\ IDs=mckinsey-stage2.coupahost Standard - Endpoint\:\:Sftp fileshare-test.coupahost. mckinsey-stage2
+Encryption\ User\ ID\ Archive=CoupaOK2PAYPGP
+File\ Name_FMNOCC=${property.FileName_FMNOCC}
+File\ Name_FMNOFeed=${property.FileName_FMNOFeed}
+FirstIflowrun_time=2023-03-01T07\:35\:25.000
+Handling\ for\ Existing\ Files=Override
+LAAS\ API\ Address=https\://erpdevorg-erpdevspclaasapp-cd-laasstaging-fs-srv.cfapps.eu10.hana.ondemand.com/laas-deductions/BPExceptionRequestForS4
+LAAS\ Authentication=LAAS_FMNO_OAuth
+LAAS_FMNO_OAuth=LAAS_FMNO_OAuth
+LAAS_Replication_Scheduler=<row><cell>dateType</cell><cell>SIMPLE</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>toInterval</cell><cell>1</cell></row><row><cell>fromInterval</cell><cell>0</cell></row><row><cell>OnEveryMinute</cell><cell>1</cell></row><row><cell>timeType</cell><cell>TIME_INTERVAL</cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>throwExceptionOnExpiry</cell><cell>false</cell></row><row><cell>second</cell><cell>*</cell></row><row><cell>minute</cell><cell>*</cell></row><row><cell>hour</cell><cell>*</cell></row><row><cell>day_of_month</cell><cell>?</cell></row><row><cell>month</cell><cell>*</cell></row><row><cell>dayOfWeek</cell><cell>*</cell></row><row><cell>year</cell><cell>*</cell></row><row><cell>startAt</cell><cell></cell></row><row><cell>endAt</cell><cell></cell></row><row><cell>attributeBehaviour</cell><cell>isThrowExceptionOnExpiryVisible,isScheduleAdvancedVisible,isScheduleAdvancedStartEndVisible,isScheduleSimpleVisible</cell></row><row><cell>triggerType</cell><cell>cron</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>simple.repeat\=DAYS&amp;simple.every\=1&amp;trigger.timeZone\=Etc/GMT</cell></row>
+ManualRunDate=2026-05-01T00\:00\:00.000
+ManualRunDate_EndDate=20260405
+Maximum\ Reconnect\ Attempts_SFTP=3
+Odata_Credential=APIM_Odata_Cred
+Odata_Credentials=
+Proxy\ Type=default
+Reconnect\ Delay\ (in\ ms)=5000
+Scheduler=<row><cell>dateType</cell><cell></cell></row><row><cell>timeType</cell><cell></cell></row><row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>onWeekly</cell><cell></cell></row><row><cell>onMonthly</cell><cell></cell></row><row><cell>OnEveryMinute</cell><cell></cell></row><row><cell>fromInterval</cell><cell></cell></row><row><cell>toInterval</cell><cell></cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>triggerType</cell><cell>simple</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>fireNow\=true</cell></row>
+Scheduler_FutureDated=<row><cell>dateType</cell><cell></cell></row><row><cell>timeType</cell><cell></cell></row><row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>onWeekly</cell><cell></cell></row><row><cell>onMonthly</cell><cell></cell></row><row><cell>OnEveryMinute</cell><cell></cell></row><row><cell>fromInterval</cell><cell></cell></row><row><cell>toInterval</cell><cell></cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>triggerType</cell><cell>simple</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>fireNow\=true</cell></row>
+Time\ you\ want\ the\ Iflow\ to\ be\ executed=2023-07-05T00\:00\:00.000
+Timeout\ (in\ min)=4
+Timeout\ (in\ ms)=10000
+cef_intermediate=/IntegrationFactory
+clientid=200
+https\://erpdevorg-erpdevspclaasapp-cd-laasstaging-fs-srv.cfapps.eu10.hana.ondemand.com/laas-deductions/BPExceptionRequestForS4=https\://erpdevorg-erpdevspclaasapp-cd-laasstaging-fs-srv.cfapps.eu10.hana.ondemand.com/laas-deductions/BPExceptionRequestForS4
+manualrun_future=false
+manualrun_true/false=false
+odata_auth=OAuth2ClientCredentials
+{{Maximum\ Reconnect\ Attempts_SFTP=3

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="JournalEntryBulkCreateConfirmation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="MessageHeader">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="UUID" type="xs:string" />
+              <xs:element name="ReferenceID" type="xs:string" />
+              <xs:element name="CreationDateTime" type="xs:dateTime" />
+              <xs:element name="SenderBusinessSystemID" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ConfirmationInterfaceOrignName" />
+        <xs:element maxOccurs="unbounded" name="JournalEntryCreateConfirmation">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MessageHeader">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="UUID" type="xs:string" />
+                    <xs:element name="ReferenceID" type="xs:unsignedInt" />
+                    <xs:element name="CreationDateTime" type="xs:dateTime" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="JournalEntryCreateConfirmation">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="AccountingDocument" type="xs:unsignedInt" />
+                    <xs:element name="CompanyCode" type="xs:string" />
+                    <xs:element name="FiscalYear" type="xs:unsignedShort" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Log">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="MaximumLogItemSeverityCode" type="xs:unsignedByte" />
+                    <xs:element name="Item">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="TypeID" type="xs:string" />
+                          <xs:element name="SeverityCode" type="xs:unsignedByte" />
+                          <xs:element name="Note" type="xs:string" />
+                          <xs:element name="WebURI" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Log" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

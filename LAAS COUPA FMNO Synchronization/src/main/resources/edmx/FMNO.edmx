@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="FmnoSrv" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="S4_FMNO_MASTER_API" EntityType="FmnoSrv.S4_FMNO_MASTER_API"/>
+                <EntitySet Name="S4_FMNO_MASTER_HIST_RYDOO_API" EntityType="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API"/>
+                <EntitySet Name="S4_FMNO_MASTER_HISTORY_API" EntityType="FmnoSrv.S4_FMNO_MASTER_HISTORY_API"/>
+                <EntitySet Name="FMNO_SKL_CD_BILL_RATE_API" EntityType="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API"/>
+                <EntitySet Name="FMNO_BILL_RATE_API" EntityType="FmnoSrv.FMNO_BILL_RATE_API"/>
+            </EntityContainer>
+            <EntityType Name="S4_FMNO_MASTER_API">
+                <Key>
+                    <PropertyRef Name="client"/>
+                </Key>
+                <Property Name="client" Type="Edm.String" MaxLength="3" Nullable="false"/>
+                <Property Name="personidExt" Type="Edm.String" MaxLength="6"/>
+                <Property Name="firstName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="lastName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="country" Type="Edm.String" MaxLength="3"/>
+                <Property Name="groupId" Type="Edm.String" MaxLength="1"/>
+                <Property Name="groupName" Type="Edm.String" MaxLength="20"/>
+                <Property Name="workerSatus" Type="Edm.String" MaxLength="13"/>
+                <Property Name="userLocation" Type="Edm.String" MaxLength="32"/>
+                <Property Name="roleCategory" Type="Edm.String" MaxLength="8"/>
+                <Property Name="skillCodeText" Type="Edm.String" MaxLength="25"/>
+                <Property Name="email" Type="Edm.String" MaxLength="241"/>
+                <Property Name="costCenter" Type="Edm.String" MaxLength="10"/>
+                <Property Name="effectiveStartDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="effectiveEndDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="branchId" Type="Edm.String" MaxLength="4"/>
+                <Property Name="preferredName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="terminationDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="updateDate" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="reasonOfAction" Type="Edm.String" MaxLength="2"/>
+                <Property Name="countryDescription" Type="Edm.String" MaxLength="50"/>
+                <Property Name="fmno" Type="Edm.String" MaxLength="20"/>
+                <Property Name="massn" Type="Edm.String" MaxLength="2"/>
+                <Property Name="roleCategoryDesc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="nameReasonOfAction" Type="Edm.String" MaxLength="30"/>
+                <Property Name="skillCode" Type="Edm.String" MaxLength="4"/>
+                <Property Name="fcat" Type="Edm.String" MaxLength="8"/>
+                <Property Name="geoLocation" Type="Edm.String" MaxLength="50"/>
+            </EntityType>
+            <EntityType Name="S4_FMNO_MASTER_HIST_RYDOO_API">
+                <Key>
+                    <PropertyRef Name="client"/>
+                </Key>
+                <Property Name="client" Type="Edm.String" MaxLength="3" Nullable="false"/>
+                <Property Name="assignmentId" Type="Edm.String" MaxLength="8"/>
+                <Property Name="firstName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="lastName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="country" Type="Edm.String" MaxLength="3"/>
+                <Property Name="groupId" Type="Edm.String" MaxLength="1"/>
+                <Property Name="groupName" Type="Edm.String" MaxLength="20"/>
+                <Property Name="workerStatus" Type="Edm.String" MaxLength="13"/>
+                <Property Name="userLocation" Type="Edm.String" MaxLength="32"/>
+                <Property Name="roleCategory" Type="Edm.String" MaxLength="8"/>
+                <Property Name="skillCodeText" Type="Edm.String" MaxLength="25"/>
+                <Property Name="email" Type="Edm.String" MaxLength="241"/>
+                <Property Name="costCenterCode" Type="Edm.String" MaxLength="10"/>
+                <Property Name="effectiveStartDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="effectiveEndDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="branchId" Type="Edm.String" MaxLength="4"/>
+                <Property Name="preferredName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="terminationDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="updateDate" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="reasonOfAction" Type="Edm.String" MaxLength="2"/>
+                <Property Name="countryDescription" Type="Edm.String" MaxLength="50"/>
+                <Property Name="fmno" Type="Edm.String" MaxLength="20"/>
+                <Property Name="massn" Type="Edm.String" MaxLength="2"/>
+                <Property Name="roleCategoryDesc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="nameReasonOfAction" Type="Edm.String" MaxLength="30"/>
+                <Property Name="skillCode" Type="Edm.String" MaxLength="4"/>
+                <Property Name="fcat" Type="Edm.String" MaxLength="8"/>
+                <Property Name="geoLocation" Type="Edm.String" MaxLength="50"/>
+                <Property Name="aedtm" Type="Edm.String" MaxLength="8"/>
+                <Property Name="changedOnDate" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="latestChangedOn" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="latestRecordFlag" Type="Edm.String" MaxLength="1"/>
+                <Property Name="bpNumber" Type="Edm.String" MaxLength="10"/>
+                <Property Name="fmnoInt" Type="Edm.Int32"/>
+                <Property Name="stat1" Type="Edm.String" MaxLength="1"/>
+                <Property Name="hireDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="latestHireDate" Type="Edm.String" MaxLength="8"/>
+            </EntityType>
+            <EntityType Name="S4_FMNO_MASTER_HISTORY_API">
+                <Key>
+                    <PropertyRef Name="client"/>
+                </Key>
+                <Property Name="client" Type="Edm.String" MaxLength="3" Nullable="false"/>
+                <Property Name="assignmentId" Type="Edm.String" MaxLength="8"/>
+                <Property Name="firstName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="lastName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="country" Type="Edm.String" MaxLength="3"/>
+                <Property Name="groupId" Type="Edm.String" MaxLength="1"/>
+                <Property Name="groupName" Type="Edm.String" MaxLength="20"/>
+                <Property Name="workerStatus" Type="Edm.String" MaxLength="13"/>
+                <Property Name="userLocation" Type="Edm.String" MaxLength="32"/>
+                <Property Name="roleCategory" Type="Edm.String" MaxLength="8"/>
+                <Property Name="skillCodeText" Type="Edm.String" MaxLength="25"/>
+                <Property Name="email" Type="Edm.String" MaxLength="241"/>
+                <Property Name="costCenterCode" Type="Edm.String" MaxLength="10"/>
+                <Property Name="effectiveStartDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="effectiveEndDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="branchId" Type="Edm.String" MaxLength="4"/>
+                <Property Name="preferredName" Type="Edm.String" MaxLength="40"/>
+                <Property Name="terminationDate" Type="Edm.String" MaxLength="8"/>
+                <Property Name="updateDate" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="reasonOfAction" Type="Edm.String" MaxLength="2"/>
+                <Property Name="countryDescription" Type="Edm.String" MaxLength="50"/>
+                <Property Name="fmno" Type="Edm.String" MaxLength="20"/>
+                <Property Name="massn" Type="Edm.String" MaxLength="2"/>
+                <Property Name="roleCategoryDesc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="nameReasonOfAction" Type="Edm.String" MaxLength="30"/>
+                <Property Name="skillCode" Type="Edm.String" MaxLength="4"/>
+                <Property Name="fcat" Type="Edm.String" MaxLength="8"/>
+                <Property Name="geoLocation" Type="Edm.String" MaxLength="50"/>
+                <Property Name="aedtm" Type="Edm.String" MaxLength="8"/>
+                <Property Name="changedOnDate" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="latestChangedOn" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="latestRecordFlag" Type="Edm.String" MaxLength="1"/>
+            </EntityType>
+            <EntityType Name="FMNO_SKL_CD_BILL_RATE_API">
+                <Key>
+                    <PropertyRef Name="client"/>
+                    <PropertyRef Name="fmno"/>
+                    <PropertyRef Name="companyCode"/>
+                    <PropertyRef Name="billRate"/>
+                    <PropertyRef Name="billRateCurrency"/>
+                    <PropertyRef Name="fmnoIndex"/>
+                    <PropertyRef Name="skillCode"/>
+                    <PropertyRef Name="skillCodeDesc"/>
+                    <PropertyRef Name="sapDesc"/>
+                    <PropertyRef Name="dailyBillRate"/>
+                    <PropertyRef Name="updateDate"/>
+                    <PropertyRef Name="usage"/>
+                </Key>
+                <Property Name="client" Type="Edm.String" MaxLength="3" Nullable="false"/>
+                <Property Name="fmno" Type="Edm.String" MaxLength="8" Nullable="false"/>
+                <Property Name="companyCode" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="billRate" Type="Edm.Decimal" Precision="11" Scale="2" Nullable="false"/>
+                <Property Name="billRateCurrency" Type="Edm.String" MaxLength="5" Nullable="false"/>
+                <Property Name="fmnoIndex" Type="Edm.String" MaxLength="40" Nullable="false"/>
+                <Property Name="skillCode" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="skillCodeDesc" Type="Edm.String" MaxLength="25" Nullable="false"/>
+                <Property Name="sapDesc" Type="Edm.String" MaxLength="80" Nullable="false"/>
+                <Property Name="dailyBillRate" Type="Edm.Decimal" Precision="11" Nullable="false"/>
+                <Property Name="updateDate" Type="Edm.DateTimeOffset" Precision="7" Nullable="false"/>
+                <Property Name="usage" Type="Edm.String" MaxLength="3" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="FMNO_BILL_RATE_API">
+                <Key>
+                    <PropertyRef Name="client"/>
+                    <PropertyRef Name="fmno"/>
+                    <PropertyRef Name="companyCode"/>
+                    <PropertyRef Name="billRate"/>
+                    <PropertyRef Name="billRateCurrency"/>
+                    <PropertyRef Name="fmnoIndex"/>
+                    <PropertyRef Name="ccPrStartDate"/>
+                    <PropertyRef Name="ccPrEndDate"/>
+                    <PropertyRef Name="ccIndStartDate"/>
+                    <PropertyRef Name="ccIndEndDate"/>
+                    <PropertyRef Name="ccPrCurrentFlag"/>
+                    <PropertyRef Name="ccIndCurrentFlag"/>
+                    <PropertyRef Name="indStartDate"/>
+                    <PropertyRef Name="skillCode"/>
+                    <PropertyRef Name="skillCodeDesc"/>
+                    <PropertyRef Name="usage"/>
+                </Key>
+                <Property Name="client" Type="Edm.String" MaxLength="3" Nullable="false"/>
+                <Property Name="fmno" Type="Edm.String" MaxLength="20" Nullable="false"/>
+                <Property Name="companyCode" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="billRate" Type="Edm.Decimal" Precision="11" Scale="2" Nullable="false"/>
+                <Property Name="billRateCurrency" Type="Edm.String" MaxLength="5" Nullable="false"/>
+                <Property Name="fmnoIndex" Type="Edm.String" MaxLength="40" Nullable="false"/>
+                <Property Name="ccPrStartDate" Type="Edm.Date" Nullable="false"/>
+                <Property Name="ccPrEndDate" Type="Edm.Date" Nullable="false"/>
+                <Property Name="ccIndStartDate" Type="Edm.Date" Nullable="false"/>
+                <Property Name="ccIndEndDate" Type="Edm.Date" Nullable="false"/>
+                <Property Name="ccPrCurrentFlag" Type="Edm.String" MaxLength="1" Nullable="false"/>
+                <Property Name="ccIndCurrentFlag" Type="Edm.String" MaxLength="1" Nullable="false"/>
+                <Property Name="indStartDate" Type="Edm.String" MaxLength="8" Nullable="false"/>
+                <Property Name="skillCode" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="skillCodeDesc" Type="Edm.String" MaxLength="500" Nullable="false"/>
+                <Property Name="usage" Type="Edm.String" MaxLength="3" Nullable="false"/>
+            </EntityType>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/client">
+                <Annotation Term="Common.Label" String="CLIENT: Client"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/personidExt">
+                <Annotation Term="Common.Label" String="PERSONID_EXT: PERSONID_EXT"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/firstName">
+                <Annotation Term="Common.Label" String="FIRST_NAME: First Name"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/lastName">
+                <Annotation Term="Common.Label" String="LAST_NAME: Last Name"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/country">
+                <Annotation Term="Common.Label" String="COUNTRY: Country/Region Key"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/groupId">
+                <Annotation Term="Common.Label" String="GROUP_ID: Employee Group"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/groupName">
+                <Annotation Term="Common.Label" String="GROUP_NAME: Employee Group Text"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/workerSatus">
+                <Annotation Term="Common.Label" String="WORKER_STATUS: FMNO STATUS"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/userLocation">
+                <Annotation Term="Common.Label" String="USER_LOCATION: Location Office"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/roleCategory">
+                <Annotation Term="Common.Label" String="ROLE_CATEGORY:  Role Category (CSP, ESP, FSP)"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/skillCodeText">
+                <Annotation Term="Common.Label" String="SKILL_CODE_TEXT: SKILL_CODE_TEXT"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/email">
+                <Annotation Term="Common.Label" String="EMAIL: Email Address"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/costCenter">
+                <Annotation Term="Common.Label" String="COST_CENTER_CODE: Cost Center"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/effectiveStartDate">
+                <Annotation Term="Common.Label" String="EFFECTIVE_START_DATE: Assignment Start Date"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/effectiveEndDate">
+                <Annotation Term="Common.Label" String="EFFECTIVE_END_DATE: Assignment End Date"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/branchId">
+                <Annotation Term="Common.Label" String="BRANCH_ID: Company Code"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/preferredName">
+                <Annotation Term="Common.Label" String="PREFERRED_NAME: Nickname"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/terminationDate">
+                <Annotation Term="Common.Label" String="TERMINATION_DATE: Termination Date"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/updateDate">
+                <Annotation Term="Common.Label" String="UPDATE_DATE: UPDATE_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/reasonOfAction">
+                <Annotation Term="Common.Label" String="REASON_OF_ACTION: MASSG"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/countryDescription">
+                <Annotation Term="Common.Label" String="COUNTRY_DESCRIPTION: LANDX50"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/fmno">
+                <Annotation Term="Common.Label" String="FMNO: FMNO"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/massn">
+                <Annotation Term="Common.Label" String="MASSN: MASSN"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/roleCategoryDesc">
+                <Annotation Term="Common.Label" String="ROLE_CATEGORY_DESC: BEZEI"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/nameReasonOfAction">
+                <Annotation Term="Common.Label" String="NAME_REASON_OF_ACTION: MGTXT"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/skillCode">
+                <Annotation Term="Common.Label" String="SKILL_CODE: SKILL_CODE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/fcat">
+                <Annotation Term="Common.Label" String="FCAT: FCAT"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_API/geoLocation">
+                <Annotation Term="Common.Label" String="GEO_LOCATION: GEO_LOCATION_NAME"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/client">
+                <Annotation Term="Common.Label" String="CLIENT: Client"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/assignmentId">
+                <Annotation Term="Common.Label" String="ASSIGNMENT_ID: ASSIGNMENT_ID"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/firstName">
+                <Annotation Term="Common.Label" String="FIRST_NAME: First Name"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/lastName">
+                <Annotation Term="Common.Label" String="LAST_NAME: Last Name"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/country">
+                <Annotation Term="Common.Label" String="COUNTRY: Country/Reg"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/groupId">
+                <Annotation Term="Common.Label" String="GROUP_ID: Employee Group"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/groupName">
+                <Annotation Term="Common.Label" String="GROUP_NAME: Employee Group Text"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/workerStatus">
+                <Annotation Term="Common.Label" String="WORKER_STATUS: FMNO Status"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/userLocation">
+                <Annotation Term="Common.Label" String="USER_LOCATION: Location Office"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/roleCategory">
+                <Annotation Term="Common.Label" String="ROLE_CATEGORY: Role Category"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/skillCodeText">
+                <Annotation Term="Common.Label" String="SKILL_CODE_TEXT: Skill Code Text"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/email">
+                <Annotation Term="Common.Label" String="EMAIL: Email Address"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/costCenterCode">
+                <Annotation Term="Common.Label" String="COST_CENTER_CODE: Cost Center"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/effectiveStartDate">
+                <Annotation Term="Common.Label" String="EFFECTIVE_START_DATE: Assignment Start Date"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/effectiveEndDate">
+                <Annotation Term="Common.Label" String="EFFECTIVE_END_DATE: Assignment End Date"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/branchId">
+                <Annotation Term="Common.Label" String="BRANCH_ID: Company Code"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/preferredName">
+                <Annotation Term="Common.Label" String="PREFERRED_NAME: Nickname"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/terminationDate">
+                <Annotation Term="Common.Label" String="TERMINATION_DATE: Termination Date"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/updateDate">
+                <Annotation Term="Common.Label" String="UPDATE_DATE: FMNO table latest update"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/reasonOfAction">
+                <Annotation Term="Common.Label" String="REASON_OF_ACTION: Reason for Action"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/countryDescription">
+                <Annotation Term="Common.Label" String="COUNTRY_DESCRIPTION: Country/Region Desc"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/fmno">
+                <Annotation Term="Common.Label" String="FMNO: FMNO"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/massn">
+                <Annotation Term="Common.Label" String="MASSN: Action Type"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/roleCategoryDesc">
+                <Annotation Term="Common.Label" String="ROLE_CATEGORY_DESC: Role Cat Desc"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/nameReasonOfAction">
+                <Annotation Term="Common.Label" String="NAME_REASON_OF_ACTION: Reason for action Desc."/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/skillCode">
+                <Annotation Term="Common.Label" String="SKILL_CODE: Skill Code"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/fcat">
+                <Annotation Term="Common.Label" String="FCAT: FCAT"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/geoLocation">
+                <Annotation Term="Common.Label" String="GEO_LOCATION: Geo Location Name"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/aedtm">
+                <Annotation Term="Common.Label" String="AEDTM: AEDTM"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/changedOnDate">
+                <Annotation Term="Common.Label" String="CHANGED_ON_DATE: CHANGED_ON_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/latestChangedOn">
+                <Annotation Term="Common.Label" String="LATEST_CHANGED_ON: LATEST_CHANGED_ON"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/latestRecordFlag">
+                <Annotation Term="Common.Label" String="LATEST_RECORD_FLAG: LATEST_RECORD_FLAG"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/bpNumber">
+                <Annotation Term="Common.Label" String="BP_NUMBER: PARTNER"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/fmnoInt">
+                <Annotation Term="Common.Label" String="FMNO_INT: FMNO_INT"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/stat1">
+                <Annotation Term="Common.Label" String="STAT1: STAT1"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/hireDate">
+                <Annotation Term="Common.Label" String="HIRE_DATE: HIRE_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HIST_RYDOO_API/latestHireDate">
+                <Annotation Term="Common.Label" String="LATEST_HIRE_DATE: LATEST_HIRE_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/client">
+                <Annotation Term="Common.Label" String="CLIENT: Client"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/assignmentId">
+                <Annotation Term="Common.Label" String="ASSIGNMENT_ID: ASSIGNMENT_ID"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/firstName">
+                <Annotation Term="Common.Label" String="FIRST_NAME: First Name"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/lastName">
+                <Annotation Term="Common.Label" String="LAST_NAME: Last Name"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/country">
+                <Annotation Term="Common.Label" String="COUNTRY: Country/Reg"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/groupId">
+                <Annotation Term="Common.Label" String="GROUP_ID: Employee Group"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/groupName">
+                <Annotation Term="Common.Label" String="GROUP_NAME: Employee Group Text"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/workerStatus">
+                <Annotation Term="Common.Label" String="WORKER_STATUS: FMNO Status"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/userLocation">
+                <Annotation Term="Common.Label" String="USER_LOCATION: Location Office"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/roleCategory">
+                <Annotation Term="Common.Label" String="ROLE_CATEGORY: Role Category"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/skillCodeText">
+                <Annotation Term="Common.Label" String="SKILL_CODE_TEXT: Skill Code Text"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/email">
+                <Annotation Term="Common.Label" String="EMAIL: Email Address"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/costCenterCode">
+                <Annotation Term="Common.Label" String="COST_CENTER_CODE: Cost Center"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/effectiveStartDate">
+                <Annotation Term="Common.Label" String="EFFECTIVE_START_DATE: Assignment Start Date"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/effectiveEndDate">
+                <Annotation Term="Common.Label" String="EFFECTIVE_END_DATE: Assignment End Date"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/branchId">
+                <Annotation Term="Common.Label" String="BRANCH_ID: Company Code"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/preferredName">
+                <Annotation Term="Common.Label" String="PREFERRED_NAME: Nickname"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/terminationDate">
+                <Annotation Term="Common.Label" String="TERMINATION_DATE: Termination Date"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/updateDate">
+                <Annotation Term="Common.Label" String="UPDATE_DATE: FMNO table latest update"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/reasonOfAction">
+                <Annotation Term="Common.Label" String="REASON_OF_ACTION: Reason for Action"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/countryDescription">
+                <Annotation Term="Common.Label" String="COUNTRY_DESCRIPTION: Country/Region Desc"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/fmno">
+                <Annotation Term="Common.Label" String="FMNO: FMNO"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/massn">
+                <Annotation Term="Common.Label" String="MASSN: Action Type"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/roleCategoryDesc">
+                <Annotation Term="Common.Label" String="ROLE_CATEGORY_DESC: Role Cat Desc"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/nameReasonOfAction">
+                <Annotation Term="Common.Label" String="NAME_REASON_OF_ACTION: Reason for action Desc."/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/skillCode">
+                <Annotation Term="Common.Label" String="SKILL_CODE: Skill Code"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/fcat">
+                <Annotation Term="Common.Label" String="FCAT: FCAT"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/geoLocation">
+                <Annotation Term="Common.Label" String="GEO_LOCATION: Geo Location Name"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/aedtm">
+                <Annotation Term="Common.Label" String="AEDTM: AEDTM"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/changedOnDate">
+                <Annotation Term="Common.Label" String="CHANGED_ON_DATE: CHANGED_ON_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/latestChangedOn">
+                <Annotation Term="Common.Label" String="LATEST_CHANGED_ON: LATEST_CHANGED_ON"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.S4_FMNO_MASTER_HISTORY_API/latestRecordFlag">
+                <Annotation Term="Common.Label" String="LATEST_RECORD_FLAG: LATEST_RECORD_FLAG"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/client">
+                <Annotation Term="Common.Label" String="MANDT: Client"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/fmno">
+                <Annotation Term="Common.Label" String="FMNO: FMNO"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/companyCode">
+                <Annotation Term="Common.Label" String="COMPANY_CODE: COMPANY_CODE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/billRate">
+                <Annotation Term="Common.Label" String="BILL_RATE: BILL_RATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/billRateCurrency">
+                <Annotation Term="Common.Label" String="BILL_RATE_CURRENCY: BILL_RATE_CURRENCY"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/fmnoIndex">
+                <Annotation Term="Common.Label" String="FMNO_INDEX: FMNO_INDEX"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/skillCode">
+                <Annotation Term="Common.Label" String="SKILL_CODE: SKILL_CODE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/skillCodeDesc">
+                <Annotation Term="Common.Label" String="SKILL_CODE_DESCRIPTION: SKILL_CODE_DESCRIPTION"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/sapDesc">
+                <Annotation Term="Common.Label" String="SAP_DESCRIPTION: SAP_DESCRIPTION"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/dailyBillRate">
+                <Annotation Term="Common.Label" String="DAILY_BILL_RATE: DAILY_BILL_RATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/updateDate">
+                <Annotation Term="Common.Label" String="UPDATE_DATE: UPDATE_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_SKL_CD_BILL_RATE_API/usage">
+                <Annotation Term="Common.Label" String="VKAUS: Usage"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/client">
+                <Annotation Term="Common.Label" String="MANDT: Client"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/fmno">
+                <Annotation Term="Common.Label" String="FMNO: FMNO"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/companyCode">
+                <Annotation Term="Common.Label" String="COMPANY_CODE: COMPANY_CODE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/billRate">
+                <Annotation Term="Common.Label" String="BILL_RATE: BILL_RATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/billRateCurrency">
+                <Annotation Term="Common.Label" String="BILL_RATE_CURRENCY: BILL_RATE_CURRENCY"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/fmnoIndex">
+                <Annotation Term="Common.Label" String="FMNO_INDEX: FMNO_INDEX"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/ccPrStartDate">
+                <Annotation Term="Common.Label" String="CC_PR_START_DATE: CC_PR_START_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/ccPrEndDate">
+                <Annotation Term="Common.Label" String="CC_PR_END_DATE: CC_PR_END_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/ccIndStartDate">
+                <Annotation Term="Common.Label" String="CC_IND_START_DATE: CC_IND_START_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/ccIndEndDate">
+                <Annotation Term="Common.Label" String="CC_IND_END_DATE: CC_IND_END_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/ccPrCurrentFlag">
+                <Annotation Term="Common.Label" String="CC_PR_CURRENT_FLAG: CC_PR_CURRENT_FLAG"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/ccIndCurrentFlag">
+                <Annotation Term="Common.Label" String="CC_IND_CURRENT_FLAG: CC_IND_CURRENT_FLAG"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/indStartDate">
+                <Annotation Term="Common.Label" String="IND_START_DATE: IND_START_DATE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/skillCode">
+                <Annotation Term="Common.Label" String="SKILL_CODE: SKILL_CODE"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/skillCodeDesc">
+                <Annotation Term="Common.Label" String="SKILL_CODE_DESCRIPTION: SKILL_CODE_DESCRIPTION"/>
+            </Annotations>
+            <Annotations Target="FmnoSrv.FMNO_BILL_RATE_API/usage">
+                <Annotation Term="Common.Label" String="VKAUS: Usage"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

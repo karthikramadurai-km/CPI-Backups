@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Wed Nov 18 10:58:17 UTC 2026
+description=Integration to sync LAAS Updates of FMNO to Coupa system which includes lookups with FDM
+source=LAAS
+target=Cooupa

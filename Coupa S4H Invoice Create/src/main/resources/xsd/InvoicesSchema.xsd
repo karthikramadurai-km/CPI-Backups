@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xs:element name="Invoices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="Invoice">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="1" minOccurs="0" name="type" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="id" type="xs:unsignedShort"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="created_at" type="xs:dateTime"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="updated_at" type="xs:dateTime"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="status" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="internal_note" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="invoice_date" type="xs:dateTime"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="invoice_number" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="line_level_taxation" type="xs:boolean"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_note" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="header_tax_amount" type="xs:decimal"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="header_tax_rate" type="xs:decimal"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="header_tax_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="paid" type="xs:boolean"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="payment_date" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="payment_notes" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="exported" type="xs:boolean"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="account_type_id" type="xs:unsignedByte"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="account_type_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="payment_term" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="payment_term_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="handling_amount" type="xs:decimal"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="misc_amount" type="xs:decimal"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="shipping_amount" type="xs:decimal"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="total" type="xs:decimal"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="currency" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="accounting_total_amount" type="xs:decimal"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="accounting_total_currency" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_id" type="xs:unsignedInt"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_number" type="xs:unsignedInt"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="created_by_email" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="created_by_employee_number" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="created_by_login" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="updated_by_email" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="updated_by_employee_number" type="xs:unsignedInt"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="updated_by_login" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="attachment_texts" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="comments" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_attention" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_street1" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_street2" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_city" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_state" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_postal_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_country_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_country_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_vat_number" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_vat_country_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="remit_to_address_vat_country_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_vat_number" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_vat_country_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="document_type" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="original_invoice_number" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="original_invoice_date" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_legal_entity_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_attention" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_street1" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_street2" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_city" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_state" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_postal_code" type="xs:unsignedShort"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_country_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_country_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="bill_to_address_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ship_to_address_attention" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ship_to_address_street1" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ship_to_address_street2" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ship_to_address_city" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ship_to_address_state" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ship_to_address_postal_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ship_to_address_country_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ship_to_address_country_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ship_to_address_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_remit_to_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_remit_to_supplier_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_remit_to_street1" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_remit_to_street2" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_remit_to_city" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_remit_to_state" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_remit_to_postal_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_remit_to_country_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="supplier_remit_to_country_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="discount_due_date" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="net_due_date" type="xs:dateTime"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="discount_amount" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="margin_scheme" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="cash_accounting_scheme_reference" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="registered_company_type" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="registered_company_managing_directors" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="esr_number" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="gl_date" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="barcode" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="description" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="payment_method_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="payment_method_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="contact_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="last_approver" type="xs:unsignedInt"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="facta" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="charge_id" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="image_now_id" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="custom_field_11" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="custom_field_12" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="custom_field_13" type="xs:unsignedInt"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="custom_field_14" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="please_enter_your_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="oracle_invoice_status" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="exception_routing" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="emergency" type="xs:boolean"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="po" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="invoice_total" type="xs:decimal"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="approver_charge_code" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="approver_fmno" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="ed_for_approvals" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="exported_to_amex" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="Channel" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="payment_channel" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="exchange_rate" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="taggings_tag_name" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="taggings_description" type="xs:string"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="LineItems">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="LineItem">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="1" minOccurs="0" name="type" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="invoice_id" type="xs:unsignedInt"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="invoice_line_id" type="xs:unsignedLong"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="created_at" type="xs:dateTime"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="updated_at" type="xs:dateTime"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="total" type="xs:decimal"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="accounting_total" type="xs:decimal"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="accounting_total_currency" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="line_num" type="xs:unsignedByte"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="description" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_header_num" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_header_requested_by_email" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_header_requested_by_employee_number" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_header_requested_by_login" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_line_id" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_line_num" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_line_commodity" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="price" type="xs:decimal"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="quantity" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="uom" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="status" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="tax_rate" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="tax_location" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="tax_code" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="tax_amount" type="xs:decimal"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="tax_description" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="tax_supply_date" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_code" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_active" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="billing_notes" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_1" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_2" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_3" type="xs:unsignedInt"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_4" type="xs:unsignedShort"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_5" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_6" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_7" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_8" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_9" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_10" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_11" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_12" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_13" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_14" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_15" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_16" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_17" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_18" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_19" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_20" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_name" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="created_by_email" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="created_by_employee_number" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="created_by_login" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="updated_by_email" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="updated_by_employee_number" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="updated_by_login" type="xs:unsignedInt"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_tax_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_shipping_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_handling_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_misc_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="commodity_name" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="GL_Account" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="Internal_Order" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="Asset_Class" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="personal_charge" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="charge_code" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="fmno" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="asset_model_number" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="serial" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="warranty_number" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="cip" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="hsnsac" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_8" type="xs:boolean"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_9" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_10" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="tax_jurisdiction_code" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="SplitLines">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Splitline">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="1" minOccurs="0" name="type" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="invoice_id" type="xs:unsignedInt"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="invoice_line_id" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="line_num" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_header_num" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_line_id" type="xs:unsignedByte"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_line_num" type="xs:unsignedInt"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_allocation_id" type="xs:decimal"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_allocation_sequence" type="xs:decimal"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_allocation_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_allocation_percent" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_code" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_active" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="billing_notes" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_1" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_2" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_3" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_4" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_5" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_6" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_7" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_8" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_9" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_10" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_11" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_12" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_13" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_14" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_15" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_16" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_17" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_18" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_19" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_20" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_name" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="currency_code" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="accounting_total" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="accounting_currency" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_tax_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_shipping_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_handling_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_misc_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_1" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_2" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_3" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_4" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_5" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_6" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_7" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_8" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_9" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_10" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="TaxLines">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="Taxline">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="1" minOccurs="0" name="type" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="invoice_id" type="xs:unsignedInt"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="invoice_line_id" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="line_num" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_header_num" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_line_id" type="xs:unsignedByte"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="order_line_num" type="xs:unsignedInt"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_allocation_id" type="xs:decimal"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_allocation_sequence" type="xs:decimal"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_allocation_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_allocation_percent" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_code" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_active" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="billing_notes" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_1" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_2" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_3" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_4" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_5" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_6" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_7" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_8" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_9" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_10" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_11" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_12" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_13" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_14" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_15" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_16" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_17" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_18" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_19" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="segment_20" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="account_name" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="currency_code" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="accounting_total" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="accounting_currency" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_tax_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_shipping_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_handling_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="distributed_misc_amount" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_1" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_2" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_3" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_4" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_5" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_6" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_7" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_8" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_9" type="xs:string"/>
+                          <xs:element maxOccurs="1" minOccurs="0" name="custom_field_10" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

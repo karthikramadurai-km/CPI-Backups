@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="LAAS_Response">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" name="Record">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ID" type="xs:string"/>
+                            <xs:element name="fmno" type="xs:string"/>
+
+                            <xs:element name="S4_FMNO_MASTER_HISTORY_API">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element minOccurs="0" name="costCenterCode" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="effectiveEndDate" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="objectStatus" nillable="true" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="groupId" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="workerStatus" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="terminationDate" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="massn" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="effectiveStartDate" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="fmno" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="changedOnDate" type="xs:dateTime"/>
+                                        <xs:element minOccurs="0" name="client" type="xs:string"/>
+                                        <xs:element minOccurs="0" name="preferredName" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element minOccurs="0" name="businessPartner" type="xs:string"/>
+                            <xs:element minOccurs="0" name="supplier" type="xs:string"/>
+                            <xs:element minOccurs="0" name="activationRequest" type="xs:boolean"/>
+                            <xs:element minOccurs="0" name="approvedAt" type="xs:dateTime"/>
+                            <xs:element minOccurs="0" name="systemStatus" type="xs:string"/>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
