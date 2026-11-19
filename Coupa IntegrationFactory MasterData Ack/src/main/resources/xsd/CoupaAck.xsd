@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="data-file-sources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="data-file-source">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:unsignedInt">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="created-at">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:dateTime">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="updated-at">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:dateTime">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="type" type="xs:string" />
+              <xs:element name="source-for" type="xs:string" />
+              <xs:element name="status" type="xs:string" />
+              <xs:element name="file-file-name" type="xs:string" />
+              <xs:element name="file-content-type" type="xs:string" />
+              <xs:element name="file-file-size" type="xs:unsignedShort" />
+              <xs:element name="result-text">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="nil" type="xs:boolean" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="progress">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="nil" type="xs:boolean" use="optional" />
+                      <xs:attribute name="type" type="xs:string" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="start-time">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:dateTime">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="end-time">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:dateTime">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="records-count">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:unsignedByte">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="records-created">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:unsignedByte">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="records-updated">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:unsignedByte">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="upload-errors-count">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:unsignedByte">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="integration-id">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:unsignedByte">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="integration-run-id">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:unsignedInt">
+                      <xs:attribute name="type" type="xs:string" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="upload-errors">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0">
+                    <xs:element maxOccurs="unbounded" name="upload-error">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="id">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:unsignedInt">
+                                  <xs:attribute name="type" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="created-at">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:dateTime">
+                                  <xs:attribute name="type" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="updated-at">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:dateTime">
+                                  <xs:attribute name="type" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="type" type="xs:string" />
+                          <xs:element name="row">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:unsignedByte">
+                                  <xs:attribute name="type" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="first-column" type="xs:string" />
+                          <xs:element name="field-with-error" type="xs:string" />
+                          <xs:element name="value" />
+                          <xs:element name="field-errors">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="field-error" type="xs:string" />
+                              </xs:sequence>
+                              <xs:attribute name="type" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="created-by">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="id">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:unsignedByte">
+                                        <xs:attribute name="type" type="xs:string" use="required" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="login" type="xs:string" />
+                                <xs:element name="email" type="xs:string" />
+                                <xs:element name="employee-number" />
+                                <xs:element name="firstname" type="xs:string" />
+                                <xs:element name="lastname" type="xs:string" />
+                                <xs:element name="fullname" type="xs:string" />
+                                <xs:element name="salesforce-id">
+                                  <xs:complexType>
+                                    <xs:attribute name="nil" type="xs:boolean" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="avatar-thumb-url">
+                                  <xs:complexType>
+                                    <xs:attribute name="nil" type="xs:boolean" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="chgcode" />
+                                <xs:element name="fmno" />
+                                <xs:element name="access-expiry-date" />
+                                <xs:element name="loaner-role" />
+                                <xs:element name="custom-fields">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="external-worker">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:boolean">
+                                              <xs:attribute name="type" type="xs:string" use="required" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="updated-by">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="id">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:unsignedByte">
+                                        <xs:attribute name="type" type="xs:string" use="required" />
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="login" type="xs:string" />
+                                <xs:element name="email" type="xs:string" />
+                                <xs:element name="employee-number" />
+                                <xs:element name="firstname" type="xs:string" />
+                                <xs:element name="lastname" type="xs:string" />
+                                <xs:element name="fullname" type="xs:string" />
+                                <xs:element name="salesforce-id">
+                                  <xs:complexType>
+                                    <xs:attribute name="nil" type="xs:boolean" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="avatar-thumb-url">
+                                  <xs:complexType>
+                                    <xs:attribute name="nil" type="xs:boolean" use="required" />
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="chgcode" />
+                                <xs:element name="fmno" />
+                                <xs:element name="access-expiry-date" />
+                                <xs:element name="loaner-role" />
+                                <xs:element name="custom-fields">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="external-worker">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:boolean">
+                                              <xs:attribute name="type" type="xs:string" use="required" />
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="type" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="created-by">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="id">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:unsignedByte">
+                            <xs:attribute name="type" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="login" type="xs:string" />
+                    <xs:element name="email" type="xs:string" />
+                    <xs:element name="employee-number" />
+                    <xs:element name="firstname" type="xs:string" />
+                    <xs:element name="lastname" type="xs:string" />
+                    <xs:element name="fullname" type="xs:string" />
+                    <xs:element name="salesforce-id">
+                      <xs:complexType>
+                        <xs:attribute name="nil" type="xs:boolean" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="avatar-thumb-url">
+                      <xs:complexType>
+                        <xs:attribute name="nil" type="xs:boolean" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="chgcode" />
+                    <xs:element name="fmno" />
+                    <xs:element name="access-expiry-date" />
+                    <xs:element name="loaner-role" />
+                    <xs:element name="custom-fields">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="external-worker">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:boolean">
+                                  <xs:attribute name="type" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="updated-by">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="id">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:unsignedByte">
+                            <xs:attribute name="type" type="xs:string" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="login" type="xs:string" />
+                    <xs:element name="email" type="xs:string" />
+                    <xs:element name="employee-number" />
+                    <xs:element name="firstname" type="xs:string" />
+                    <xs:element name="lastname" type="xs:string" />
+                    <xs:element name="fullname" type="xs:string" />
+                    <xs:element name="salesforce-id">
+                      <xs:complexType>
+                        <xs:attribute name="nil" type="xs:boolean" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="avatar-thumb-url">
+                      <xs:complexType>
+                        <xs:attribute name="nil" type="xs:boolean" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="chgcode" />
+                    <xs:element name="fmno" />
+                    <xs:element name="access-expiry-date" />
+                    <xs:element name="loaner-role" />
+                    <xs:element name="custom-fields">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="external-worker">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:boolean">
+                                  <xs:attribute name="type" type="xs:string" use="required" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="type" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

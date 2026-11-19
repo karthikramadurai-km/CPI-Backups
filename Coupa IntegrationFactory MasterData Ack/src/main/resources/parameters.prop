@@ -1,0 +1,25 @@
+#
+#Wed Nov 18 10:58:22 UTC 2026
+/AlertsTrigger=/AlertsTrigger
+/Incoming/FileStaging=/Incoming/FileStaging
+/Incoming/LookupValues=/Incoming/LookupValues
+/cef_intermediate=/IntegrationFactory
+/reprocessCoupaAck=/reprocessCoupaAck
+1=1
+10=10
+3=3
+60000=60000
+Auth=user_password
+Authentication=OAuth2 Client Credentials
+Auto\ Disconnect=1
+Coupa=Coupa
+CoupaAck=CoupaAck
+Coupa_SFTP=Coupa_SFTP
+ESBMessaging.send=ESBMessaging.send
+Max\ Reconnect\ Attempts=3
+Recnnect\ Delay=1000
+Reconnect\ Delay=1000
+Timeout=10000
+Timout=10000
+fileshare-test.coupahost.com=fileshare-test.coupahost.com
+https\://mckinsey-stage2.coupahost.com/api/data_file_sources=https\://mckinsey-stage2.coupahost.com/api/data_file_sources

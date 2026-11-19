@@ -1,0 +1,14 @@
+#
+#Wed Nov 18 10:58:18 UTC 2026
+/Incoming/FileStaging=/Incoming/FileStaging
+1=1
+Alerts=/AlertsTrigger
+CoupaAck=CoupaAck
+Coupa_SFTP=Coupa_SFTP
+DefaultDate=2022-11-01T00\:00\:00.000Z
+Encryption\ User\ ID\ Archive=CoupaOK2PAYPGP
+Filename=*.csv
+IF_Address=/IntegrationFactory
+Post-Processing=delete
+Scheduler=<row><cell>dayValue</cell><cell></cell></row><row><cell>monthValue</cell><cell></cell></row><row><cell>yearValue</cell><cell></cell></row><row><cell>dateType</cell><cell>DAILY</cell></row><row><cell>secondValue</cell><cell>0</cell></row><row><cell>minutesValue</cell><cell></cell></row><row><cell>hourValue</cell><cell></cell></row><row><cell>toInterval</cell><cell>24</cell></row><row><cell>fromInterval</cell><cell>0</cell></row><row><cell>OnEveryHour</cell><cell>2</cell></row><row><cell>timeType</cell><cell>TIME_HOUR_INTERVAL</cell></row><row><cell>timeZone</cell><cell>( UTC 5\:30 ) India Standard Time(IST)</cell></row><row><cell>throwExceptionOnExpiry</cell><cell>true</cell></row><row><cell>second</cell><cell>*</cell></row><row><cell>minute</cell><cell>*</cell></row><row><cell>hour</cell><cell>*</cell></row><row><cell>day_of_month</cell><cell>?</cell></row><row><cell>month</cell><cell>*</cell></row><row><cell>dayOfWeek</cell><cell>*</cell></row><row><cell>year</cell><cell>*</cell></row><row><cell>startAt</cell><cell></cell></row><row><cell>endAt</cell><cell></cell></row><row><cell>attributeBehaviour</cell><cell>isScheduleOnDayRequired,isScheduleRecurRequired</cell></row><row><cell>triggerType</cell><cell>cron</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>0+0+0,2,4,6,8,10,12,14,16,18,20,22+?+*+*+*&amp;trigger.timeZone\=IST</cell></row>
+fileshare-test.coupahost.com=fileshare-test.coupahost.com
